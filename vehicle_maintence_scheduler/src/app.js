@@ -16,6 +16,12 @@ app.get("/time", (req, res) => {
   });
 });
 
+app.get("/status", (req, res) => {
+  res.json({
+    status: "Active"
+  });
+});
+
 app.get("/", (req, res) => {
   res.json({
     success: true,
