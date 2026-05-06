@@ -10,6 +10,12 @@ app.use(express.json());
 
 app.use("/", schedulerRoutes);
 
+app.get("/time", (req, res) => {
+  res.json({
+    currentTime: new Date()
+  });
+});
+
 app.get("/", (req, res) => {
   res.json({
     success: true,
